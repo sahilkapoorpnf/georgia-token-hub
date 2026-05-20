@@ -2,6 +2,58 @@
 @source "../src";
 @import "tw-animate-css";
 
+:root {
+  --royal: #0057FF;
+  --royal-dark: #0033A0;
+  --royal-light: #4D8BFF;
+  --sky: #E8F1FF;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; background: #ffffff; color: #0B1F4D; }
+.font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.02em; }
+
+.glass {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0,87,255,0.12);
+  box-shadow: 0 10px 40px -10px rgba(0,87,255,0.18);
+}
+.glass-dark {
+  background: linear-gradient(135deg, rgba(0,51,160,0.95), rgba(0,87,255,0.9));
+  color: #fff;
+  box-shadow: 0 20px 60px -20px rgba(0,87,255,0.5);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #0033A0 0%, #0057FF 50%, #4D8BFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-bg {
+  background: radial-gradient(circle at 20% 10%, rgba(77,139,255,0.18), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(0,87,255,0.15), transparent 40%),
+              linear-gradient(180deg, #ffffff, #F4F8FF);
+}
+.soft-shadow { box-shadow: 0 30px 80px -30px rgba(0,87,255,0.25); }
+.ring-royal { box-shadow: 0 0 0 1px rgba(0,87,255,0.15), 0 20px 60px -25px rgba(0,87,255,0.35); }
+
+@keyframes float-slow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+.animate-float { animation: float-slow 6s ease-in-out infinite; }
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(0,87,255,0.45); }
+  100% { box-shadow: 0 0 0 24px rgba(0,87,255,0); }
+}
+.pulse-ring { animation: pulse-ring 2.4s ease-out infinite; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,87,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,87,255,0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
