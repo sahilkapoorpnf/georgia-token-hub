@@ -59,7 +59,6 @@ function Nav() {
             <a href="#how" className="hover:text-[#0057FF]">How it works</a>
             <a href="#revenue" className="hover:text-[#0057FF]">Revenue</a>
             <a href="#security" className="hover:text-[#0057FF]">Security</a>
-            <a href="#pricing" className="hover:text-[#0057FF]">Pricing</a>
           </nav>
           <a href="#cta" className="inline-flex items-center gap-1.5 rounded-xl bg-[#0057FF] px-4 py-2 text-sm font-semibold text-white soft-shadow hover:bg-[#0033A0] transition">
             Get Proposal <ArrowRight className="h-4 w-4" />
@@ -743,42 +742,6 @@ function AuditPricing() {
   );
 }
 
-function Pricing() {
-  const base = ["Web platform","Admin panel","Investor dashboard","Buy/sell marketplace","Rental module","Blockchain integration","Smart contracts"];
-  const extra = ["Smart contract audit","VAPT","Security testing","Audit reports","Re-audit support","Investor-grade security"];
-  return (
-    <section id="pricing" className="py-28 bg-white">
-      <div className="mx-auto max-w-7xl px-6">
-        <Heading kicker="Section 11 · Project pricing"
-          title={<>Two clear, enterprise-grade <span className="gradient-text">packages</span></>}
-        />
-        <div className="mt-14 grid md:grid-cols-2 gap-6 items-stretch">
-          <motion.div {...fadeUp} className="rounded-3xl p-8 bg-white border border-slate-200 soft-shadow flex flex-col">
-            <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold">Package 1</div>
-            <h3 className="mt-2 font-display text-2xl font-bold text-[#0B1F4D]">Without Security Audit</h3>
-            <div className="mt-4 font-display text-5xl font-bold text-[#0033A0]">$40,000</div>
-            <ul className="mt-6 space-y-2.5 flex-1">
-              {base.map(f=>(<li key={f} className="flex items-center gap-2 text-[#0B1F4D]"><Check className="h-4 w-4 text-[#0057FF]" /> {f}</li>))}
-            </ul>
-            <a href="#cta" className="mt-8 inline-flex items-center justify-center rounded-xl border border-[#0057FF]/20 px-5 py-3 font-semibold text-[#0033A0] hover:bg-[#E8F1FF] transition">Choose Package 1</a>
-          </motion.div>
-
-          <motion.div {...fadeUp} className="relative rounded-3xl p-8 glass-dark flex flex-col overflow-hidden">
-            <div className="absolute top-5 right-5 inline-flex items-center gap-1.5 rounded-full bg-white text-[#0057FF] text-xs font-bold px-3 py-1"><Star className="h-3 w-3" /> MOST RECOMMENDED</div>
-            <div className="text-xs uppercase tracking-wider text-white/70 font-semibold">Package 2</div>
-            <h3 className="mt-2 font-display text-2xl font-bold">With Complete Security Audit</h3>
-            <div className="mt-4 font-display text-5xl font-bold">$65,000</div>
-            <div className="mt-6 text-sm text-white/80 font-semibold">Everything in Package 1, plus:</div>
-            <ul className="mt-3 space-y-2.5 flex-1">
-              {extra.map(f=>(<li key={f} className="flex items-center gap-2"><Check className="h-4 w-4" /> {f}</li>))}
-            </ul>
-            <a href="#cta" className="mt-8 inline-flex items-center justify-center rounded-xl bg-white text-[#0057FF] px-5 py-3 font-semibold hover:bg-slate-100 transition">Choose Package 2</a>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Timeline() {
   const phases = [
@@ -958,7 +921,6 @@ export default function Presentation() {
         <InvestorEarnings />
         <Security />
         <AuditPricing />
-        <Pricing />
         <Timeline />
         <Future />
         <WhyBitdecentro />
